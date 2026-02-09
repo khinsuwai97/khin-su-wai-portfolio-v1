@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
-import { Rubik, Poppins } from "next/font/google";
-import "./globals.css";
-import Navigation from "@/components/Navigation";
+import type { Metadata } from 'next';
+import { Rubik } from 'next/font/google';
+import './globals.css';
 
 const rubik = Rubik({
-  subsets: ["latin"],
+  subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-rubik',
 });
@@ -15,17 +14,18 @@ const rubik = Rubik({
 // });
 
 export const metadata: Metadata = {
-  title: "Khin Su Wai - Frontend Developer Portfolio",
-  description: "I build accessible, pixel-perfect digital experiences for the web.",
+  title: 'Khin Su Wai - Frontend Developer Portfolio',
+  description:
+    'I build accessible, pixel-perfect digital experiences for the web.',
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "16x16" },
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: '/favicon.ico', sizes: '16x16' },
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
-    apple: "/apple-touch-icon.svg",
+    apple: '/apple-touch-icon.svg',
   },
-  themeColor: "#14b8a6",
+  themeColor: '#14b8a6',
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${rubik.variable} ${rubik.className} antialiased`}>
         <div className="w-full">
-          <Navigation />
+          {/* <Navigation /> */}
           {children}
         </div>
       </body>

@@ -1,11 +1,9 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
     Github, Linkedin, Mail, Phone, MessageCircle,
-    Download, Menu, X, Send, Briefcase, Calendar, Sparkles,
-    ExternalLink, Code2, Lightbulb, Users, Zap, Heart
+    Download, Sparkles,
 } from 'lucide-react';
 
 import Image from "next/image";
@@ -85,7 +83,7 @@ const Hero = () => {
                             transition={{ delay: 0.5 }}
                         >
                             <motion.button
-                                className="flex items-center gap-2 px-5 py-2.5 border-2 border-teal-500 text-teal-400 rounded-lg font-medium hover:bg-teal-500/10"
+                                className="flex items-center gap-2 px-5 py-2.5 border-2 border-teal-500 text-teal-400 rounded-lg font-medium hover:bg-teal-500/10 cursor-pointer"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -127,10 +125,14 @@ const Hero = () => {
                     >
                         <div className="relative w-full aspect-square max-w-50 md:max-w-md mx-auto">
                             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-full blur-2xl animate-pulse" />
-                            <div className="relative w-full h-full bg-slate-800 rounded-full border-4 border-teal-500/30 overflow-hidden flex items-center justify-center">
-                                <div className="text-6xl font-bold bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
-                                    Your Photo
-                                </div>
+                            <div className="relative w-full h-full bg-slate-800 rounded-full border-4 border-teal-500/30 overflow-hidden">
+                                <Image
+                                    src="/images/KhinSu.png"
+                                    alt="Khin Su Wai"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
                             </div>
                             <motion.div
                                 className="absolute -top-4 -right-4 md: bg-teal-500 text-white px-4 py-2 rounded-lg font-bold shadow-lg md:flex hidden"

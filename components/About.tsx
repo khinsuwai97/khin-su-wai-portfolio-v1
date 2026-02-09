@@ -1,29 +1,13 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import {
-  Github,
-  Linkedin,
-  Twitter,
-  Mail,
-  MapPin,
-  Phone,
-  Download,
-  Menu,
-  X,
-  Send,
-  Briefcase,
-  Calendar,
-  ExternalLink,
   Code2,
   Lightbulb,
   Users,
   Zap,
-  Heart,
 } from 'lucide-react';
-
-import Image from 'next/image';
 
 const About = () => {
   const ref = useRef(null);

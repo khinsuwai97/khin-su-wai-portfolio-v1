@@ -1,38 +1,25 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import {
     Github,
     Linkedin,
-    Twitter,
     Mail,
     MapPin,
     Phone,
-    Download,
-    Menu,
-    X,
-    Send,
-    Briefcase,
-    Calendar,
-    ExternalLink,
-    Code2,
-    Lightbulb,
-    Users,
-    Zap,
-    Heart,
 } from 'lucide-react';
 
 const Contact = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: '-100px' });
-    const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+    // const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert('Message sent! Thank you for reaching out.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-    };
+    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault();
+    //     alert('Message sent! Thank you for reaching out.');
+    //     setFormData({ name: '', email: '', subject: '', message: '' });
+    // };
 
     return (
         <section id="contact" className="py-20 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)' }}>
