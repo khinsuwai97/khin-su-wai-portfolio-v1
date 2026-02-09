@@ -21,7 +21,7 @@ const Experience = () => {
             location: 'Chiang Mai, Thailand',
             period: 'Oct 2023 - present',
             description: 'As a frontend developer, I am currently working on a Network Management System (NMS) and Element Management System (EMS) designed to monitor and manage machines across a network. My responsibilities include building user-friendly interfaces,good performance of UI and real time machine statuses using the ATOMIC DESIGN PATTERN.I collaborate closely with backend teams to integrate APIs. I use technologies such as React, TypeScript, Redux for state management,Hero UI, Tailwind CSS and MUI in my current project.',
-            technologies: ['React', 'JavaScript(ES6+)', 'TypeScript', 'Tailwind CSS', 'MaterialUI', "HeroUI", 'Redux', 'GitLab', "Python"],
+            technologies: ['React', 'JavaScript (ES6+)', 'TypeScript', 'Tailwind CSS', 'MaterialUI', "HeroUI", 'Redux', 'GitLab', "Python"],
             achievements: [
                 // 'Improved page load performance by 60%',
                 // 'Mentored 5 junior developers',
