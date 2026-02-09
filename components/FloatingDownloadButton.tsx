@@ -18,7 +18,9 @@ const FloatingDownloadButton = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
+        <motion.a
+          href="/Khin_Su_Wai_Resume.pdf"
+          download
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0, opacity: 0 }}
@@ -35,7 +37,7 @@ const FloatingDownloadButton = () => {
           <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Download Resume
           </div>
-        </motion.button>
+        </motion.a>
       )}
     </AnimatePresence>
   );
