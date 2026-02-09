@@ -62,7 +62,7 @@ const Navigation = () => {
                             <motion.button
                                 key={item.name}
                                 onClick={() => scrollToSection(item.href)}
-                                className="text-slate-300 hover:text-teal-400 font-medium"
+                                className="text-slate-300 hover:text-teal-400 font-medium cursor-pointer"
                                 whileHover={{ y: -2 }}
                             >
                                 {item.name}

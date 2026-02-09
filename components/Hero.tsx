@@ -12,11 +12,11 @@ import Image from "next/image";
 
 const Hero = () => {
     const socialLinks = [
-        { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-        { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-        { icon: Mail, href: 'mailto:your.email@example.com', label: 'Email' },
-        { icon: Phone, href: 'tel:+1234567890', label: 'Phone' },
-        { icon: MessageCircle, href: 'https://wa.me/1234567890', label: 'WhatsApp' },
+        { icon: Github, href: 'https://github.com/khinsuwai97', label: 'GitHub' },
+        { icon: Linkedin, href: 'https://www.linkedin.com/in/khin-su-wai-erica-3830b1114/', label: 'LinkedIn' },
+        { icon: Mail, href: 'https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwRQMTKpHlPGKggGfGlXclJNpWJBRVnfMhVPJnDMZZHvQTTjBZRFHnVhhnFxlZnhhTVdLzk', label: 'Email' },
+        { icon: Phone, href: 'tel:+66629853725', label: 'Phone' },
+        { icon: MessageCircle, href: 'https://wa.me/+66629853725', label: 'WhatsApp' },
     ];
 
     return (
@@ -85,21 +85,12 @@ const Hero = () => {
                             transition={{ delay: 0.5 }}
                         >
                             <motion.button
-                                className="flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-lg font-medium hover:bg-teal-600 shadow-lg shadow-teal-500/20"
+                                className="flex items-center gap-2 px-5 py-2.5 border-2 border-teal-500 text-teal-400 rounded-lg font-medium hover:bg-teal-500/10"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <Download size={20} />
+                                <Download size={18} />
                                 Download Resume
-                            </motion.button>
-
-                            <motion.button
-                                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="px-6 py-3 border-2 border-teal-500 text-teal-400 rounded-lg font-medium hover:bg-teal-500/10"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                Get In Touch
                             </motion.button>
                         </motion.div>
 
