@@ -50,9 +50,8 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'backdrop-blur-lg shadow-lg' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        }`}
       style={{
         backgroundColor: isScrolled ? 'rgba(10, 25, 47, 0.95)' : 'transparent',
       }}
@@ -86,7 +85,7 @@ const Navigation = () => {
           </div>
 
           <button
-            className="md:hidden text-slate-300 hover:text-teal-400"
+            className="md:hidden text-slate-300 cursor-pointer hover:text-teal-400"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -106,7 +105,7 @@ const Navigation = () => {
                   <motion.button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left py-2 px-4 text-slate-300 hover:text-teal-400 hover:bg-slate-800 rounded-lg"
+                    className="block w-full cursor-pointer text-left py-2 px-4 text-slate-300 hover:text-teal-400 hover:bg-slate-800 rounded-lg"
                     whileHover={{ x: 4 }}
                   >
                     {item.name}
