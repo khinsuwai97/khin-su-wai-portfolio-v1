@@ -16,7 +16,7 @@ const Experience = () => {
       title: 'Junior Frontend Developer',
       company: 'XENOptics Co.,LTD',
       location: 'Chiang Mai, Thailand',
-      period: 'Oct 2023 - present',
+      period: 'Oct 2023 - Mar 2026',
       description:
         'Working on a Network Management System (NMS) and Element Management System (EMS) designed to monitor and manage machines across a network.',
       responsibilities: [

@@ -2,12 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import {
-  Code2,
-  Lightbulb,
-  Users,
-  Zap,
-} from 'lucide-react';
+import { Code2, Lightbulb, Users, Zap } from 'lucide-react';
 
 const About = () => {
   const ref = useRef(null);
@@ -108,7 +103,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.6 + index * 0.1 }}
-                className="p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300"
+                className="p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 cursor-pointer"
                 style={{ backgroundColor: 'rgba(15, 32, 50, 0.5)' }}
                 whileHover={{ scale: 1.05 }}
               >
