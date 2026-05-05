@@ -1,41 +1,41 @@
-'use client';
+"use client";
 
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Calendar, ExternalLink } from 'lucide-react';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Calendar, ExternalLink } from "lucide-react";
 
-import Image from 'next/image';
-import XenLogo from '../public/xen_logo.png';
+import Image from "next/image";
+import XenLogo from "../public/xen_logo.png";
 
 const Experience = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const experiences = [
     {
-      title: 'Junior Frontend Developer',
-      company: 'XENOptics Co.,LTD',
-      location: 'Chiang Mai, Thailand',
-      period: 'Oct 2023 - Mar 2026',
+      title: "Frontend Developer",
+      company: "XENOptics Co.,LTD",
+      location: "Chiang Mai, Thailand",
+      period: "Oct 2023 - Mar 2026",
       description:
-        'Working on a Network Management System (NMS) and Element Management System (EMS) designed to monitor and manage machines across a network.',
+        "Working on a Network Management System (NMS) and Element Management System (EMS) designed to monitor and manage machines across a network.",
       responsibilities: [
-        'Build user-friendly interfaces following the ATOMIC DESIGN PATTERN',
-        'Optimize UI performance and real-time machine status updates',
-        'Collaborate closely with backend teams to integrate APIs',
-        'Develop responsive web applications using React and TypeScript',
+        "Build user-friendly interfaces following the ATOMIC DESIGN PATTERN",
+        "Optimize UI performance and real-time machine status updates",
+        "Collaborate closely with backend teams to integrate APIs",
+        "Develop responsive web applications using React and TypeScript",
       ],
       technologies: [
-        'React',
-        'JavaScript (ES6+)',
-        'TypeScript',
-        'Tailwind CSS',
-        'MaterialUI',
-        'HeroUI',
-        'Redux',
-        'GitLab',
-        'Python',
-        'WebSocket',
+        "React",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Tailwind CSS",
+        "MaterialUI",
+        "HeroUI",
+        "Redux",
+        "GitLab",
+        "Python",
+        "WebSocket",
       ],
       achievements: [
         // 'Improved page load performance by 60%',
@@ -62,7 +62,7 @@ const Experience = () => {
     <section
       id="experience"
       className="py-20 md:py-32 relative overflow-hidden"
-      style={{ backgroundColor: '#0a192f' }}
+      style={{ backgroundColor: "#0a192f" }}
     >
       <div
         className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10"
@@ -74,7 +74,7 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">
-            Where{' '}
+            Where{" "}
             <span className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
               I've Worked
             </span>
