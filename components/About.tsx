@@ -30,7 +30,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 md:py-32 relative overflow-hidden"
+      className="py-20 md:py-32 relative"
       style={{
         background: "linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)",
       }}
