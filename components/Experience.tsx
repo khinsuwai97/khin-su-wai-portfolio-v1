@@ -83,7 +83,7 @@ const Experience = () => {
             className="w-20 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto"
             initial={{ width: 0 }}
             animate={isInView ? { width: 80 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ duration: 0.35 }}
           />
         </motion.div>
 
@@ -93,7 +93,7 @@ const Experience = () => {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.3 + index * 0.2 }}
+              transition={{ duration: 0.35 }}
               className="bg-slate-800/50 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all"
               whileHover={{ scale: 1.02 }}
             >

@@ -1,33 +1,33 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Code2, Lightbulb, Users, Zap } from 'lucide-react';
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Code2, Lightbulb, Users, Zap } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const highlights = [
     {
       icon: Code2,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable code',
+      title: "Clean Code",
+      description: "Writing maintainable, scalable code",
     },
     {
       icon: Lightbulb,
-      title: 'Problem Solver',
-      description: 'Turning challenges into solutions',
+      title: "Problem Solver",
+      description: "Turning challenges into solutions",
     },
     {
       icon: Users,
-      title: 'Team Player',
-      description: 'Collaborating with cross-functional teams',
+      title: "Team Player",
+      description: "Collaborating with cross-functional teams",
     },
     {
       icon: Zap,
-      title: 'Fast Learner',
-      description: 'Adapting to new technologies quickly',
+      title: "Fast Learner",
+      description: "Adapting to new technologies quickly",
     },
   ];
 
@@ -36,7 +36,7 @@ const About = () => {
       id="about"
       className="py-20 md:py-32 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)',
+        background: "linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)",
       }}
     >
       <div
@@ -49,7 +49,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">
-            About{' '}
+            About{" "}
             <span className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
               Me
             </span>
@@ -58,7 +58,7 @@ const About = () => {
             className="w-20 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto"
             initial={{ width: 0 }}
             animate={isInView ? { width: 80 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ duration: 0.35 }}
           />
         </motion.div>
 
@@ -66,7 +66,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.3 }}
+            transition={{ duration: 0.35 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-teal-400">
               Crafting Digital Experiences
@@ -77,8 +77,8 @@ const About = () => {
                 experience building modern, responsive web applications. I
                 specialize in React, Next.js, and TypeScript, with a strong
                 focus on creating accessible and performant user interfaces. I
-                am also learning backend development with{' '}
-                <span className="text-teal-400">Node.js</span> and{' '}
+                am also learning backend development with{" "}
+                <span className="text-teal-400">Node.js</span> and{" "}
                 <span className="text-teal-400">Express</span> to become a
                 well-rounded full-stack developer as well.
               </p>
@@ -94,7 +94,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.5 }}
+            transition={{ duration: 0.35 }}
             className="grid grid-cols-2 gap-4"
           >
             {highlights.map((item, index) => (
@@ -102,9 +102,9 @@ const About = () => {
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.6 + index * 0.1 }}
+                transition={{ duration: 0.35 }}
                 className="p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 cursor-pointer"
-                style={{ backgroundColor: 'rgba(15, 32, 50, 0.5)' }}
+                style={{ backgroundColor: "rgba(15, 32, 50, 0.5)" }}
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="w-12 h-12 bg-teal-500/10 rounded-lg flex items-center justify-center mb-4">

@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section
       id="contact"
       className="py-20 md:py-32 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)',
+        background: "linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)",
       }}
     >
       <div
@@ -26,7 +26,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-300">
-            Get In{' '}
+            Get In{" "}
             <span className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
               Touch
             </span>
@@ -35,7 +35,7 @@ const Contact = () => {
             className="w-20 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto mb-4"
             initial={{ width: 0 }}
             animate={isInView ? { width: 80 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ duration: 0.35 }}
           />
           <p className="text-slate-300 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or

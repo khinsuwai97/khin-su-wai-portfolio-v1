@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const AdditionalSkills = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: "Frontend",
       skills: [
-        { name: 'React / Next.js', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Tailwind CSS', level: 90 },
+        { name: "React / Next.js", level: 95 },
+        { name: "TypeScript", level: 90 },
+        { name: "Tailwind CSS", level: 90 },
       ],
     },
     {
-      title: 'Tools',
+      title: "Tools",
       skills: [
-        { name: 'Git / GitHub', level: 90 },
-        { name: 'Jest / Testing', level: 85 },
-        { name: 'Figma', level: 75 },
+        { name: "Git / GitHub", level: 90 },
+        { name: "Jest / Testing", level: 85 },
+        { name: "Figma", level: 75 },
       ],
     },
     // {
@@ -35,16 +35,16 @@ const AdditionalSkills = () => {
   ];
 
   const additionalSkills = [
-    'Responsive Design',
-    'Web Accessibility',
-    'Performance Optimization',
-    'SEO',
-    'Agile/Scrum',
-    'CI/CD',
-    'Node.js',
-    'MongoDB',
-    'Firebase',
-    'Framer Motion',
+    "Responsive Design",
+    "Web Accessibility",
+    "Performance Optimization",
+    "SEO",
+    "Agile/Scrum",
+    "CI/CD",
+    "Node.js",
+    "MongoDB",
+    "Firebase",
+    "Framer Motion",
   ];
 
   return (
@@ -52,7 +52,7 @@ const AdditionalSkills = () => {
       id="skills"
       className="py-20 md:py-32 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)',
+        background: "linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)",
       }}
     >
       <div
@@ -71,7 +71,7 @@ const AdditionalSkills = () => {
             className="w-20 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto"
             initial={{ width: 0 }}
             animate={isInView ? { width: 80 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
+              transition={{ duration: 0.35 }}
           />
         </motion.div> */}
 
@@ -81,7 +81,7 @@ const AdditionalSkills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.3 + categoryIndex * 0.1 }}
+              transition={{ duration: 0.35 }}
               className="bg-slate-800/50 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-slate-700"
             >
               <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
@@ -93,7 +93,7 @@ const AdditionalSkills = () => {
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: 0.9 + index * 0.05 }}
+                    transition={{ duration: 0.35 }}
                     whileHover={{ scale: 1.1, y: -4 }}
                     className="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-teal-500/50 text-slate-300 hover:text-teal-400 rounded-lg text-sm font-medium cursor-default"
                   >
@@ -133,7 +133,7 @@ const AdditionalSkills = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8 }}
+          transition={{ duration: 0.35 }}
         >
           {/* <h3 className="text-2xl font-bold mb-6 text-center">
             Additional{' '}
