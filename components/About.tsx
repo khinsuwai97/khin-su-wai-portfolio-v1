@@ -6,7 +6,7 @@ import { Code2, Lightbulb, Users, Zap } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20px" });
+  const isInView = useInView(ref, { once: true, margin: "200px" });
 
   const highlights = [
     {
