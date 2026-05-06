@@ -6,7 +6,7 @@ import { Code2, Lightbulb, Users, Zap } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
 
   const highlights = [
     {
@@ -46,6 +46,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.35 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">

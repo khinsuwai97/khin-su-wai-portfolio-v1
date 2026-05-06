@@ -48,9 +48,7 @@ const Navigation = () => {
   };
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "backdrop-blur-lg shadow-lg" : "bg-transparent"
       }`}
@@ -118,7 +116,7 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
