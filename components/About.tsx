@@ -30,7 +30,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 md:py-32 relative"
+      className="isolate py-20 md:py-32 relative bg-navy-900 [backface-visibility:hidden] [transform:translateZ(0)]"
       style={{
         background: "linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)",
       }}
@@ -53,7 +53,7 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-slate-300 leading-relaxed">
               <p>
-                I'm a passionate self-taught Frontend Developer with 2+ years of
+                I&apos;m a passionate self-taught Frontend Developer with 2+ years of
                 experience building modern, responsive web applications. I
                 specialize in React, Next.js, and TypeScript, with a strong
                 focus on creating accessible and performant user interfaces. I
@@ -64,7 +64,7 @@ const About = () => {
               </p>
               <p>
                 My journey started with a curiosity about web development so
-                decided to pursue it professionally. Today, I've had the
+                decided to pursue it professionally. Today, I&apos;ve had the
                 privilege of working with established company helping them bring
                 their digital visions to life.
               </p>

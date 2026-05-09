@@ -35,22 +35,25 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-svh flex items-center justify-center relative overflow-hidden pt-20">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ transform: 'translateZ(0)' }}>
+    <section className="isolate min-h-dvh md:min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-24 md:pt-20 md:pb-0 bg-navy-900">
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none [backface-visibility:hidden] [transform:translateZ(0)]"
+        aria-hidden="true"
+      >
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl will-change-transform"
+          className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-teal-500/10 rounded-full blur-3xl will-change-transform"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-600/10 rounded-full blur-3xl will-change-transform"
+          className="absolute bottom-1/4 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-teal-600/10 rounded-full blur-3xl will-change-transform"
           animate={{ scale: [1.2, 1, 1.2], opacity: [0.5, 0.3, 0.5] }}
           transition={{ duration: 8, repeat: Infinity, delay: 1 }}
         />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -96,7 +99,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Hi, I'm Khin Su Wai. A self-taught Frontend Developer based in
+              Hi, I&apos;m Khin Su Wai. A self-taught Frontend Developer based in
               Chiang Mai, Thailand. I build accessible, pixel-perfect digital
               experiences for the web. Specialized in React, Next.js, and
               TypeScript.
