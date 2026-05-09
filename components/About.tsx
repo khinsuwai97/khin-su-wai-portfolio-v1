@@ -30,13 +30,13 @@ const About = () => {
   return (
     <section
       id="about"
-      className="isolate py-20 md:py-32 relative bg-navy-900 [backface-visibility:hidden] [transform:translateZ(0)]"
+      className="relative bg-navy-900 py-20 md:py-32"
       style={{
         background: "linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="text-center mb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-14 md:mb-16">
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">
             About{" "}
             <span className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
@@ -46,8 +46,8 @@ const About = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+          <div className="min-w-0">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-teal-400">
               Crafting Digital Experiences
             </h3>
