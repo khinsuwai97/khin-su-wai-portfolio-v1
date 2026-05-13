@@ -38,7 +38,7 @@ const Contact = () => {
             transition={{ duration: 0.35 }}
           />
           <p className="text-slate-300 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities.
           </p>
         </motion.div>

@@ -24,10 +24,6 @@ const Skills = () => {
         "React Testing Library",
       ],
     },
-    // {
-    //   title: 'Backend',
-    //   skills: ['Node.js', 'Express', 'Python'],
-    // },
     {
       title: "Tools",
       skills: [
@@ -42,28 +38,6 @@ const Skills = () => {
       ],
     },
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring" as const,
-        stiffness: 100,
-      },
-    },
-  };
 
   return (
     <section
@@ -112,74 +86,17 @@ const Skills = () => {
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.35 }}
-                    whileHover={{ scale: 1.1, y: -4 }}
+                    transition={{ duration: 0.35, delay: categoryIndex * 0.08 + index * 0.03 }}
+                    whileHover={{ scale: 1.06, y: -3 }}
                     className="px-4 py-2 bg-slate-800 border border-slate-700 hover:border-teal-500/50 text-slate-300 hover:text-teal-400 rounded-lg text-sm font-medium cursor-default"
                   >
                     {skill}
                   </motion.span>
                 ))}
               </div>
-              {/* <div className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-white font-medium">
-                        {skill.name}
-                      </span>
-                      <span className="text-teal-400 font-bold">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-teal-500 to-teal-600 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={isInView ? { width: `${skill.level}%` } : {}}
-                        transition={{
-                          delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.1,
-                          duration: 1,
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div> */}
             </motion.div>
           ))}
         </div>
-
-        {/* <div className="space-y-12">
-          {skillCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.2 + categoryIndex * 0.1 }}
-            >
-              <h3 className="text-2xl font-bold text-teal-400 mb-6">
-                {category.title}
-              </h3>
-              <motion.div
-                className="flex flex-wrap gap-3"
-                variants={containerVariants}
-                initial="hidden"
-                animate={isInView ? 'visible' : 'hidden'}
-              >
-                {category.skills.map((skill) => (
-                  <motion.div
-                    key={skill}
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className="px-3 py-1  text-teal-400 text-sm rounded-full border border-teal-500/20"
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
-              </motion.div>
-            </motion.div>
-          ))}
-        </div> */}
       </div>
     </section>
   );

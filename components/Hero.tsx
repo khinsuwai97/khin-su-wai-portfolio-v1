@@ -42,13 +42,13 @@ const Hero = () => {
       >
         <motion.div
           className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-teal-500/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity }}
+          animate={{ scale: [1, 1.15, 1], opacity: [0.22, 0.38, 0.22] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-teal-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.5, 0.3, 0.5] }}
-          transition={{ duration: 8, repeat: Infinity, delay: 1 }}
+          animate={{ scale: [1.1, 1, 1.1], opacity: [0.38, 0.22, 0.38] }}
+          transition={{ duration: 10, repeat: Infinity, delay: 1, ease: "easeInOut" }}
         />
       </div>
 
@@ -80,9 +80,6 @@ const Hero = () => {
             >
               Khin Su Wai
               <br />
-              {/* <span className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
-                                Frontend Developer
-                            </span> */}
             </motion.h1>
             <motion.p
               className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text font-bold text-transparent text-3xl mb-6"
@@ -115,22 +112,12 @@ const Hero = () => {
                 href="/Khin_Su_Wai_Resume.pdf"
                 download
                 className="flex items-center gap-2 px-5 py-2.5 border-2 border-teal-500 text-teal-400 rounded-lg font-medium hover:bg-teal-500/10 cursor-pointer"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Download size={18} />
                 Download Resume
               </motion.a>
-              {/* <motion.a
-                                href="/Khin_Su_Wai_Cover_Letter.pdf"
-                                download
-                                className="flex items-center gap-2 px-5 py-2.5 border-2 border-teal-500 text-teal-400 rounded-lg font-medium hover:bg-teal-500/10 cursor-pointer"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <Download size={18} />
-                                Download Cover Letter
-                            </motion.a> */}
             </motion.div>
 
             <motion.div
@@ -164,7 +151,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative order-first md:order-last"
           >
-            <div className="relative w-full aspect-square max-w-50 md:max-w-md mx-auto">
+            <div className="relative w-full aspect-square max-w-52 md:max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-full blur-2xl animate-pulse" />
               <div className="relative w-full h-full bg-slate-800 rounded-full border-4 border-teal-500/30 overflow-hidden">
                 <Image
@@ -176,7 +163,7 @@ const Hero = () => {
                 />
               </div>
               <motion.div
-                className="absolute -top-4 -right-4 md: bg-teal-500 text-white px-4 py-2 rounded-lg font-bold shadow-lg md:flex hidden"
+                className="absolute -top-4 -right-4 bg-teal-500 text-white px-4 py-2 rounded-lg font-bold shadow-lg md:flex hidden"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >

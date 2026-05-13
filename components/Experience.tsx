@@ -37,25 +37,8 @@ const Experience = () => {
         "Python",
         "WebSocket",
       ],
-      achievements: [
-        // 'Improved page load performance by 60%',
-        // 'Mentored 5 junior developers',
-        // 'Led migration to TypeScript',
-      ],
+      achievements: [],
     },
-    // {
-    //     title: 'Frontend Developer',
-    //     company: 'Digital Agency',
-    //     location: 'New York, NY',
-    //     period: '2020 - 2022',
-    //     description: 'Developed responsive web applications for various clients in e-commerce and healthcare.',
-    //     technologies: ['React', 'Redux', 'SCSS', 'Material-UI', 'Jest'],
-    //     achievements: [
-    //         'Built 15+ client projects on time',
-    //         'Implemented automated testing',
-    //         'Optimized SEO for 200% traffic increase',
-    //     ],
-    // },
   ];
 
   return (
@@ -76,7 +59,7 @@ const Experience = () => {
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">
             Where{" "}
             <span className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
-              I've Worked
+              I&apos;ve Worked
             </span>
           </h2>
           <motion.div
@@ -95,7 +78,7 @@ const Experience = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.35 }}
               className="bg-slate-800/50 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all"
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.015, y: -4 }}
             >
               <div className="flex flex-col gap-3 mb-4">
                 <div className="flex items-center gap-2 text-teal-400 font-medium flex-wrap">
@@ -123,7 +106,6 @@ const Experience = () => {
                   >
                     <ExternalLink size={16} />
                   </a>
-                  {/* <span className="text-slate-500">•</span> */}
                   <span className="text-slate-400">{exp.location}</span>
                 </div>
 
@@ -170,18 +152,6 @@ const Experience = () => {
                   </span>
                 ))}
               </div>
-
-              {/* <div className="space-y-2">
-                                <h4 className="font-semibold text-white text-sm mb-2">Key Achievements:</h4>
-                                <ul className="space-y-2 text-sm text-slate-300">
-                                    {exp.achievements.map((achievement, i) => (
-                                        <li key={i} className="flex items-start gap-2">
-                                            <span className="text-teal-400 mt-1">▹</span>
-                                            <span>{achievement}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div> */}
             </motion.div>
           ))}
         </div>

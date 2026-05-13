@@ -1,17 +1,5 @@
-import type { Metadata } from 'next';
-import { Rubik } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
-
-const rubik = Rubik({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-rubik',
-});
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   weight: ['300', '400', '500', '600', '700', '800', '900'],
-//   variable: '--font-poppins',
-// });
 
 export const metadata: Metadata = {
   title: 'Khin Su Wai - Frontend Developer Portfolio',
@@ -25,6 +13,9 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.svg',
   },
+};
+
+export const viewport: Viewport = {
   themeColor: '#14b8a6',
 };
 
@@ -35,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${rubik.variable} ${rubik.className} antialiased`}>
+      <body className="antialiased">
         <div className="w-full">
           {/* <Navigation /> */}
           {children}

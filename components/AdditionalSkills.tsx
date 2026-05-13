@@ -76,7 +76,7 @@ const AdditionalSkills = () => {
         </motion.div> */}
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {skillCategories.map((category, categoryIndex) => (
+          {skillCategories.map((category) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 50 }}
@@ -88,7 +88,7 @@ const AdditionalSkills = () => {
                 {category.title}
               </h3>
               <div className="flex flex-wrap justify-start gap-3">
-                {additionalSkills.map((skill, index) => (
+                {additionalSkills.map((skill) => (
                   <motion.span
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}

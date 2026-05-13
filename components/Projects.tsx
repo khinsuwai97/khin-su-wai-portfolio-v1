@@ -7,13 +7,8 @@ import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import corporationX from "../public/images/corporationX.png";
 import elysianStays from "../public/images/elysianStays.png";
-import moviesHub from "../public/images/moviesHub.png";
 import movieHubs from "../public/images/movies-hub.png";
-import omniFood from "../public/images/omni-food.png";
-import quizzical from "../public/images/quizzical.png";
 import taskflowBoard from "../public/images/taskflow-board.png";
-import trendyShop from "../public/images/trendy-shop.png";
-// import trendyShoe from "../public/images/trendyShoe.png"
 import trendyShoe from "../public/images/trendy.png";
 import khinSuWaiPortfolio from "../public/images/khin-su-wai-old-porfolio.png";
 
@@ -161,16 +156,14 @@ const Projects = () => {
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.35 }}
+              transition={{ duration: 0.35, delay: index * 0.05 }}
               className="group"
             >
               <motion.div
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700 hover:border-teal-500/50 transition-all flex flex-col md:flex-row"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.015, y: -4 }}
               >
-                {/* Image - full width on mobile, left half on desktop */}
-                {/* md:w-1/2 h-64 md:min-h-80 */}
-                <div className="relative w-full md:w-1/2 overflow-hidden">
+                <div className="relative w-full md:w-1/2 overflow-hidden min-h-64">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -179,7 +172,6 @@ const Projects = () => {
                   />
                 </div>
 
-                {/* Content - below image on mobile, right side on desktop */}
                 <div className="p-6 md:p-8 flex flex-col justify-center md:w-1/2">
                   <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-teal-400 transition-colors">
                     {project.title}

@@ -22,7 +22,7 @@ const FloatingDownloadButton = () => {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0, opacity: 0 }}
-          className="fixed cursor-pointer bottom-8 right-8 z-50 p-3 bg-teal-500 text-white rounded-full shadow-2xl shadow-teal-500/50 hover:bg-teal-600 group"
+          className="group fixed bottom-5 right-5 z-50 cursor-pointer rounded-full border border-teal-400/20 bg-teal-500 p-3 text-slate-950 shadow-2xl shadow-teal-500/30 transition-colors hover:bg-teal-400 md:bottom-8 md:right-8"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >

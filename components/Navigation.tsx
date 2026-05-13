@@ -6,7 +6,6 @@ import { Menu, X } from "lucide-react";
 
 import Image from "next/image";
 
-// Navigation Component
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,7 +40,7 @@ const Navigation = () => {
 
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
-      setTimeout(scroll, 300); // Wait for menu close animation to finish
+      setTimeout(scroll, 300);
     } else {
       scroll();
     }

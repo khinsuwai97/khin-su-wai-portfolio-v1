@@ -36,7 +36,13 @@ const About = () => {
       }}
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="text-center mb-14 md:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-120px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14 md:mb-16"
+        >
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">
             About{" "}
             <span className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
@@ -44,10 +50,16 @@ const About = () => {
             </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto" />
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
-          <div className="min-w-0">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-start mb-16">
+          <motion.div
+            className="min-w-0"
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-120px" }}
+            transition={{ duration: 0.6 }}
+          >
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-teal-400">
               Crafting Digital Experiences
             </h3>
@@ -69,15 +81,19 @@ const About = () => {
                 their digital visions to life.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-2 gap-4">
-            {highlights.map((item) => (
+            {highlights.map((item, index) => (
               <motion.div
                 key={item.title}
-                className="p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 cursor-pointer"
+                className="p-5 md:p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 cursor-pointer"
                 style={{ backgroundColor: "rgba(15, 32, 50, 0.5)" }}
-                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ scale: 1.03, y: -4 }}
               >
                 <div className="w-12 h-12 bg-teal-500/10 rounded-lg flex items-center justify-center mb-4">
                   <item.icon className="text-teal-400" size={24} />
