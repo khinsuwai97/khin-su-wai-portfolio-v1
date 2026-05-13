@@ -1,16 +1,30 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Code2, Lightbulb, Users, Zap } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   const isInView = useInView(ref, {
     once: true,
     margin: "0px 0px 160px 0px",
     amount: 0.08,
   });
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+
+    updateIsMobile();
+    mediaQuery.addEventListener("change", updateIsMobile);
+
+    return () => mediaQuery.removeEventListener("change", updateIsMobile);
+  }, []);
+
+  const shouldShowImmediately = isMobile;
+  const shouldAnimate = shouldShowImmediately || isInView;
 
   const highlights = [
     {
@@ -48,9 +62,9 @@ const About = () => {
         ref={ref}
       >
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.35 }}
+          initial={shouldShowImmediately ? false : { opacity: 0, y: 30 }}
+          animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: shouldShowImmediately ? 0 : 0.35 }}
           className="text-center mb-14 md:mb-16"
         >
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">
@@ -65,9 +79,9 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-start mb-16">
           <motion.div
             className="min-w-0"
-            initial={{ opacity: 0, x: -24 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.35, delay: 0.05 }}
+            initial={shouldShowImmediately ? false : { opacity: 0, x: -24 }}
+            animate={shouldAnimate ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: shouldShowImmediately ? 0 : 0.35, delay: shouldShowImmediately ? 0 : 0.05 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-teal-400">
               Crafting Digital Experiences
@@ -98,9 +112,12 @@ const About = () => {
                 key={item.title}
                 className="p-5 md:p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 cursor-pointer"
                 style={{ backgroundColor: "rgba(15, 32, 50, 0.5)" }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.28, delay: 0.08 + index * 0.04 }}
+                initial={shouldShowImmediately ? false : { opacity: 0, y: 20 }}
+                animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
+                transition={{
+                  duration: shouldShowImmediately ? 0 : 0.28,
+                  delay: shouldShowImmediately ? 0 : 0.08 + index * 0.04,
+                }}
                 whileHover={{ scale: 1.03, y: -4 }}
               >
                 <div className="w-12 h-12 bg-teal-500/10 rounded-lg flex items-center justify-center mb-4">
