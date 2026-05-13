@@ -1,9 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Code2, Lightbulb, Users, Zap } from "lucide-react";
 
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 0px 160px 0px",
+    amount: 0.08,
+  });
+
   const highlights = [
     {
       icon: Code2,
@@ -35,12 +43,14 @@ const About = () => {
         background: "linear-gradient(to bottom, #0a192f, #0d1b2a, #0a192f)",
       }}
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div
+        className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12"
+        ref={ref}
+      >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-120px" }}
-          transition={{ duration: 0.6 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.35 }}
           className="text-center mb-14 md:mb-16"
         >
           <h2 className="text-4xl md:text-5xl text-slate-300 font-bold mb-4">
@@ -56,9 +66,8 @@ const About = () => {
           <motion.div
             className="min-w-0"
             initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-120px" }}
-            transition={{ duration: 0.6 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.35, delay: 0.05 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-teal-400">
               Crafting Digital Experiences
@@ -90,9 +99,8 @@ const About = () => {
                 className="p-5 md:p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 cursor-pointer"
                 style={{ backgroundColor: "rgba(15, 32, 50, 0.5)" }}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.28, delay: 0.08 + index * 0.04 }}
                 whileHover={{ scale: 1.03, y: -4 }}
               >
                 <div className="w-12 h-12 bg-teal-500/10 rounded-lg flex items-center justify-center mb-4">
