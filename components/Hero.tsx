@@ -35,7 +35,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="isolate min-h-dvh md:min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-24 md:pt-20 md:pb-0 bg-navy-900">
+    <section className="isolate relative overflow-hidden bg-navy-900 pt-28 pb-12 md:min-h-screen md:pt-20 md:pb-0">
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none [backface-visibility:hidden] [transform:translateZ(0)]"
         aria-hidden="true"
@@ -53,7 +53,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -149,9 +149,9 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative order-first md:order-last"
+            className="relative order-first md:order-last mb-2 md:mb-0"
           >
-            <div className="relative w-full aspect-square max-w-52 md:max-w-md mx-auto">
+            <div className="relative w-full aspect-square max-w-40 sm:max-w-44 md:max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-full blur-2xl animate-pulse" />
               <div className="relative w-full h-full bg-slate-800 rounded-full border-4 border-teal-500/30 overflow-hidden">
                 <Image
@@ -182,7 +182,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 md:flex hidden"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 lg:flex hidden"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
