@@ -77,7 +77,7 @@ const Skills = () => {
               transition={{ duration: 0.35 }}
               className="bg-slate-800/50 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-slate-700"
             >
-              <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
+              <h3 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
                 {category.title}
               </h3>
               <div className="flex flex-wrap justify-start gap-3">

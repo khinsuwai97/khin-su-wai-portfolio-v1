@@ -110,7 +110,7 @@ const Experience = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3">
-                  <h3 className="text-lg md:text-2xl font-bold text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">
                     {exp.title}
                   </h3>
 
@@ -121,21 +121,23 @@ const Experience = () => {
                 </div>
               </div>
 
-              <p className="text-slate-300 mb-4">{exp.description}</p>
+              <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+                {exp.description}
+              </p>
 
               {exp.responsibilities && exp.responsibilities.length > 0 && (
                 <div className="mb-6">
-                  <h4 className="font-semibold text-white text-sm mb-3">
+                  <h4 className="font-semibold text-white text-sm md:text-base  mb-3">
                     Responsibilities:
                   </h4>
                   <ul className="space-y-2">
                     {exp.responsibilities.map((responsibility, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-slate-300 text-sm"
+                        className="flex items-start gap-3 text-slate-300 text-sm md:text-base"
                       >
                         <span className="text-teal-400 mt-1 shrink-0">▹</span>
-                        <span>{responsibility}</span>
+                        <p>{responsibility}</p>
                       </li>
                     ))}
                   </ul>

@@ -82,7 +82,7 @@ const Hero = () => {
               <br />
             </motion.h1>
             <motion.p
-              className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text font-bold text-transparent text-3xl mb-6"
+              className="bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text font-bold text-transparent text-3xl md:text-4xl mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}

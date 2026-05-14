@@ -37,7 +37,7 @@ const Contact = () => {
             animate={isInView ? { width: 80 } : {}}
             transition={{ duration: 0.35 }}
           />
-          <p className="text-slate-300 max-w-2xl mx-auto">
+          <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
             I&apos;m always open to discussing new projects, creative ideas, or
             opportunities.
           </p>
@@ -49,7 +49,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
           >
             <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700 h-full">
-              <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
+              <h3 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
                 Contact Information
               </h3>
               <div className="space-y-6">
@@ -103,7 +103,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
           >
             <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700 h-full">
-              <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
+              <h3 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent">
                 Connect With Me
               </h3>
               <div className="space-y-6">

@@ -135,7 +135,7 @@ const Projects = () => {
             animate={isInView ? { width: 80 } : {}}
             transition={{ duration: 0.35 }}
           />
-          <p className="text-slate-300 max-w-2xl mx-auto">
+          <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and
             experience.Want to see more? Please visit my{" "}
             <a
@@ -173,10 +173,10 @@ const Projects = () => {
                 </div>
 
                 <div className="p-6 md:p-8 flex flex-col justify-center md:w-1/2">
-                  <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-teal-400 transition-colors">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white group-hover:text-teal-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-slate-300 text-sm mb-5">
+                  <p className="text-slate-300 text-sm md:text-base mb-5 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -196,7 +196,7 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-teal-500 hover:bg-teal-600 text-white text-xs font-medium rounded-md transition-colors"
+                      className="flex items-center gap-1.5 px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white text-sm font-medium rounded-md transition-colors"
                       whileHover={{ scale: 1.05 }}
                     >
                       Live Demo
@@ -206,7 +206,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 px-3 py-1.5 border border-teal-500 text-teal-400 hover:bg-teal-500/10 text-xs font-medium rounded-md transition-colors"
+                      className="flex items-center gap-1.5 px-4 py-2 border border-teal-500 text-teal-400 hover:bg-teal-500/10 text-sm font-medium rounded-md transition-colors"
                       whileHover={{ scale: 1.05 }}
                     >
                       View Code
