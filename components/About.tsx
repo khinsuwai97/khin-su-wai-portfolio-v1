@@ -86,7 +86,7 @@ const About = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-teal-400">
               Crafting Digital Experiences
             </h3>
-            <div className="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed">
+            <div className="space-y-4 text-slate-300 text-base leading-relaxed">
               <p>
                 I&apos;m a passionate self-taught Frontend Developer with 2+ years of
                 experience building modern, responsive web applications. I

@@ -37,7 +37,7 @@ const Contact = () => {
             animate={isInView ? { width: 80 } : {}}
             transition={{ duration: 0.35 }}
           />
-          <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-slate-300 text-base max-w-2xl mx-auto">
             I&apos;m always open to discussing new projects, creative ideas, or
             opportunities.
           </p>

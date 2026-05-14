@@ -135,7 +135,7 @@ const Projects = () => {
             animate={isInView ? { width: 80 } : {}}
             transition={{ duration: 0.35 }}
           />
-          <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-slate-300 text-base max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and
             experience.Want to see more? Please visit my{" "}
             <a
@@ -176,7 +176,7 @@ const Projects = () => {
                   <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white group-hover:text-teal-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-slate-300 text-sm md:text-base mb-5 leading-relaxed">
+                  <p className="text-slate-300 text-base mb-5 leading-relaxed">
                     {project.description}
                   </p>
 

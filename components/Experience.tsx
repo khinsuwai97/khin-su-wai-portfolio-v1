@@ -121,20 +121,20 @@ const Experience = () => {
                 </div>
               </div>
 
-              <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+              <p className="text-slate-300 text-base leading-relaxed mb-4">
                 {exp.description}
               </p>
 
               {exp.responsibilities && exp.responsibilities.length > 0 && (
                 <div className="mb-6">
-                  <h4 className="font-semibold text-white text-sm md:text-base  mb-3">
+                  <h4 className="font-semibold text-white text-base mb-3">
                     Responsibilities:
                   </h4>
                   <ul className="space-y-2">
                     {exp.responsibilities.map((responsibility, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-slate-300 text-sm md:text-base"
+                        className="flex items-start gap-3 text-slate-300 text-base"
                       >
                         <span className="text-teal-400 mt-1 shrink-0">▹</span>
                         <p>{responsibility}</p>
