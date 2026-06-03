@@ -11,12 +11,30 @@ import movieHubs from "../public/images/movies-hub.png";
 import taskflowBoard from "../public/images/taskflow-board.png";
 import trendyShoe from "../public/images/trendy.png";
 import khinSuWaiPortfolio from "../public/images/khin-su-wai-old-porfolio.png";
-
+import devcamper from "../public/images/devcamper.png";
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const projects = [
+    {
+      title: "DevCamper",
+      description:
+        "DevCamper is a modern web application for managing bootcamps, courses, and users. It is built with React, Next.js, and Node.js, and provides a seamless user experience with a focus on performance and scalability.",
+      technologies: [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "JWT Authentication",
+        "React",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/khinsuwai97/devcamper-frontend",
+      "API github": "https://github.com/khinsuwai97/devcamper",
+      demo: "https://devcampbootcamp.netlify.app/",
+      image: devcamper,
+    },
     {
       title: "Movies Hub",
       description:
@@ -191,7 +209,7 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex justify-start items-center gap-3">
+                  <div className="flex justify-start flex-wrap items-center gap-3">
                     <motion.a
                       href={project.demo}
                       target="_blank"
@@ -212,6 +230,18 @@ const Projects = () => {
                       View Code
                       <Github size={14} />
                     </motion.a>
+                    {project["API github"] && (
+                      <motion.a
+                        href={project["API github"]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 px-4 py-2 border border-teal-500 text-teal-400 hover:bg-teal-500/10 text-sm font-medium rounded-md transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        API Code
+                        <Github size={14} />
+                      </motion.a>
+                    )}
                   </div>
                   <span className="text-xs text-slate-500 mt-4">{`${project.note ? `Note: ${project.note}` : ""}`}</span>
                 </div>
