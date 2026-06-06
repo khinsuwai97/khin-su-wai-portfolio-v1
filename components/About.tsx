@@ -81,21 +81,27 @@ const About = () => {
             className="min-w-0"
             initial={shouldShowImmediately ? false : { opacity: 0, x: -24 }}
             animate={shouldAnimate ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: shouldShowImmediately ? 0 : 0.35, delay: shouldShowImmediately ? 0 : 0.05 }}
+            transition={{
+              duration: shouldShowImmediately ? 0 : 0.35,
+              delay: shouldShowImmediately ? 0 : 0.05,
+            }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-teal-400">
               Crafting Digital Experiences
             </h3>
             <div className="space-y-4 text-slate-300 text-base leading-relaxed">
               <p>
-                I&apos;m a passionate self-taught Frontend Developer with 2+ years of
-                experience building modern, responsive web applications. I
-                specialize in React, Next.js, and TypeScript, with a strong
-                focus on creating accessible and performant user interfaces. I
-                am also learning backend development with{" "}
+                I&apos;m a passionate self-taught Frontend Developer with 2+
+                years of experience building modern, responsive web
+                applications. I specialize in React, Next.js, and TypeScript,
+                with a strong focus on creating accessible and performant user
+                interfaces. In addition to frontend development, my
+                self-learning with{" "}
                 <span className="text-teal-400">Node.js</span> and{" "}
-                <span className="text-teal-400">Express</span> to become a
-                well-rounded full-stack developer as well.
+                <span className="text-teal-400">Express</span> alongside a solid
+                understanding of API design and data flow, means I'm
+                well-positioned to contribute across the stack — and on track to
+                becoming a well-rounded full-stack developer.
               </p>
               <p>
                 My journey started with a curiosity about web development so
